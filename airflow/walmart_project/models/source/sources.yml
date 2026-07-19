@@ -1,0 +1,18 @@
+version: 2
+
+sources:
+  - name: source  # Source system name
+    database: walmart      # Optional: database where source is stored
+    schema: silver  # Schema containing the source tables
+    tables:
+      - name: customers_tech   # Table name as it exists in the database
+      - name: employees_tech
+      - name: order_items_tech
+      - name: orders_tech
+      - name: products_tech
+      - name: stores_tech
+  - name: silver_business
+    database: walmart
+    schema: silver_business
+    tables:
+      - name: obt_b
